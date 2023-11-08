@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+         header {
+            background-color: #333;
+            color: #dfd4d4;
+            text-align: center;
+            
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #faf9f833;
+            text-align: center;
+            display: flex;
+            min-height: 100%;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #efe9e9;
+        }
+
+        form {
+            background-color: #727070;
+            border-radius: 6px;
+            padding: 20px 60px;
+            margin: auto;
+        }
+
+        label {
+            text-align: left;
+            display: block;
+            margin-bottom: 0px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #252222;
+            border-radius: 3px;
+        }
+
+        input[type="button"],
+        input[type="reset"] {
+            background-color: #333;
+            color: #fffafa;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+            
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .cancelbtn{
+            background-color: #333;
+            color: #fffafa;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+        html{
+            height: 100%;
+            
+        }
+        span.psw {
+        display: block;
+        padding: 0.9px;
+        float: none;
+
+        }
+        footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        
+    }
+        h2{
+            text-align: center;
+            position:static;
+            margin-top: 0%;
+            left: 800px;
+            top: 125px;
+            padding: 0px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MOVIE BOOKING</h1>
+    </header>
+    <div class="nav-links" id="nav-links">
+        <a href="C:\Users\asus\Downloads\B9ECED6F.ASUSPCAssistant_qmba6cd70vzyy!App\OneDrive\Desktop\HTML\Home.htm">Home</a>
+        <a href="C:\Users\asus\Downloads\B9ECED6F.ASUSPCAssistant_qmba6cd70vzyy!App\OneDrive\Desktop\HTML\bootstrap.htm">Movie Schedule</a>
+        <a href="C:\Users\asus\Downloads\B9ECED6F.ASUSPCAssistant_qmba6cd70vzyy!App\OneDrive\Desktop\HTML\login2.htm">Login</a>
+        <a href="C:\Users\asus\Downloads\B9ECED6F.ASUSPCAssistant_qmba6cd70vzyy!App\OneDrive\Desktop\HTML\aboutus.html">About Us</a>
+        <a href="C:\Users\asus\Downloads\B9ECED6F.ASUSPCAssistant_qmba6cd70vzyy!App\OneDrive\Desktop\HTML\contactus.html">Contact Us</a>
+    </div>
+    <form>
+        <b><h2>LOGIN</h2></b>
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        
+        
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        
+        
+            <input type="button"  onclick="formSubmit()" value="Login">
+            <input type="reset" value="Reset">
+            <span class="psw">Forgot <a href="C:\Users\asus\Downloads\B9ECED6F.ASUSPCAssistant_qmba6cd70vzyy!App\OneDrive\Desktop\HTML\forgotPassword.htm">password?</a></span>
+            <span class="psw">New Account <a href="C:\Users\asus\Downloads\B9ECED6F.ASUSPCAssistant_qmba6cd70vzyy!App\OneDrive\Desktop\HTML\account.html">Create new account</a></span>
+        </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <footer>
+        <p>&copy; 2023 Movie Booking</p>
+        <p>Contact: info@MovieBooking.com</p>
+        <p>Address: Shop No.3, Building by, SUGEE SADAN by SUGEE GROUP, Gokhale Rd, Dadar West, Dadar, Mumbai, Maharashtra 400028</p>
+    </footer>
+
+
+    <script>
+        function formSubmit() {
+            
+            var name = document.getElementById('username').value;
+            var email = document.getElementById('password').value;
+            var alertMessage = "Username: " + name + "\nPassword: " + email;
+            alert(alertMessage)
+        }
+    </script>
+</body>
+</html>

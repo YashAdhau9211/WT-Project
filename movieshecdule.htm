@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Schedule</title>
+    <style>
+         header {
+            background-color: #333;
+            color: #dfd4d4;
+            padding: 10px;
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            min-height: 100%;
+            flex-direction: column;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+            
+        }
+        html{
+            height: 100%;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        footer {
+        margin-top: auto;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MOVIE BOOKING</h1>
+    </header>
+    <div class="nav-links" id="nav-links">
+        <a href="C:\Users\asus\Downloads\B9ECED6F.ASUSPCAssistant_qmba6cd70vzyy!App\OneDrive\Desktop\HTML\Home.htm">Home</a>
+        <a href="C:\Users\asus\Downloads\B9ECED6F.ASUSPCAssistant_qmba6cd70vzyy!App\OneDrive\Desktop\HTML\movieshecdule.htm">Movie Schedule</a>
+        <a href="C:\Users\asus\Downloads\B9ECED6F.ASUSPCAssistant_qmba6cd70vzyy!App\OneDrive\Desktop\HTML\login2.htm">Login</a>
+        <a href="C:\Users\asus\Downloads\B9ECED6F.ASUSPCAssistant_qmba6cd70vzyy!App\OneDrive\Desktop\HTML\aboutus.html">About Us</a>
+        <a href="C:\Users\asus\Downloads\B9ECED6F.ASUSPCAssistant_qmba6cd70vzyy!App\OneDrive\Desktop\HTML\contactus.html">Contact Us</a>
+    </div>
+    
+    <table id="scheduleTable">
+        <h1>Movie Schedule</h1>
+        <thead>
+            <tr>
+                <th>Movie</th>
+                <th>Showtime</th>
+                <th>Duration</th>
+                <th>Genre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- JavaScript will populate this table -->
+        </tbody>
+    </table>
+    <footer>
+        <p>&copy; 2023 Movie Booking</p>
+        <p>Contact: info@MovieBooking.com</p>
+        <p>Address: Shop No.3, Building by, SUGEE SADAN by SUGEE GROUP, Gokhale Rd, Dadar West, Dadar, Mumbai, Maharashtra 400028</p>
+    </footer>
+
+    <script>
+        // Sample movie data
+        var movies = [
+            { movie: "Movie 1", showtime: "10:00 AM", duration: "2 hours", genre: "Action" },
+            { movie: "Movie 2", showtime: "1:00 PM", duration: "2.5 hours", genre: "Comedy" },
+            { movie: "Movie 3", showtime: "4:00 PM", duration: "2 hours", genre: "Drama" },
+            { movie: "Movie 4", showtime: "7:00 PM", duration: "1.5 hours", genre: "Adventure" }
+        ];
+
+        // Function to populate the table
+        function populateTable() {
+            var table = document.getElementById("scheduleTable");
+            var tbody = table.getElementsByTagName("tbody")[0];
+
+            for (var i = 0; i < movies.length; i++) {
+                var movie = movies[i];
+                var row = tbody.insertRow(i);
+
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+
+                cell1.innerHTML = movie.movie;
+                cell2.innerHTML = movie.showtime;
+                cell3.innerHTML = movie.duration;
+                cell4.innerHTML = movie.genre;
+            }
+        }
+
+        // Call the populateTable function to fill in the data
+        populateTable();
+    </script>
+</body>
+</html>
